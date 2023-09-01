@@ -1,0 +1,10 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "simus",
+    "password": "daphnelebb1803",
+    "database": "travel_app",
+    "entities": ["src/entity/*.ts"],
+    "syncronize": true
+}
