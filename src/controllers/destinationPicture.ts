@@ -1,5 +1,5 @@
 import { Request, Response, Express } from 'express';
-import { AppDataSource } from '../index';
+import { AppDataSource } from '../data-source';
 import { Destination } from '../entity/destination';
 import { DestinationPicture } from '../entity/destinationPicture';
 

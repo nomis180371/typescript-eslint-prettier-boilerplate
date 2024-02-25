@@ -1,6 +1,6 @@
 import { User } from '../entity/user';
 import { Request, Response } from 'express';
-import { AppDataSource } from '..';
+import { AppDataSource } from '../data-source';
 
 const createUser = async (req: Request, res: Response) => {
   const { username, email, password } = req.body;

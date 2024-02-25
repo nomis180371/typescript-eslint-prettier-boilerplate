@@ -2,9 +2,9 @@
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
-    "username": "simus",
-    "password": "daphnelebb1803",
-    "database": "travel_app",
+    "username": "root",
+    "password": "1234",
+    "database": "backbars",
     "entities": ["src/entity/*.ts"],
     "syncronize": true
 }

@@ -1,6 +1,6 @@
 import { Destination } from '../entity/destination';
 import { Request, Response } from 'express';
-import { AppDataSource } from '../index';
+import { AppDataSource } from '../data-source';
 
 const addDestination = async (req: Request, res: Response) => {
   const destination = new Destination();

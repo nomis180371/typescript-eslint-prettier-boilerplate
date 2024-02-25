@@ -9,7 +9,8 @@
     "resolveJsonModule": true,  
      "lib": [
          "es5",
-         "es6"
+         "es6",
+         "dom"
       ], 
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
