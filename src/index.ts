@@ -1,24 +1,23 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import 'reflect-metadata';
+import cors from 'cors';
+import { ScrappingParamsRoutes } from './scrappingParams/scrappingParamsRoutes';
+import { ScrappperRoutes } from './scrapper/scrapperRoutes';
+import { AlertsRoutes } from './alerts/alertsRoutes';
 
 const app = express();
-const townRoutes = require('./routes/town');
-const destinationRoutes = require('./routes/destination');
-const userRoutes = require('./routes/user');
-const productsRoutes = require('./routes/products');
-const scrappingRoutes = require('./routes/scrappingTask');
-const paramsRoutes = require('./routes/params');
+const paramsRoutes = new ScrappingParamsRoutes();
+const scrapperRoutes = new ScrappperRoutes();
+const alertsRoutes = new AlertsRoutes();
 
 app.use(express.json());
+app.use(cors());
 app.use(bodyParser.json());
 app.use(
-  townRoutes,
-  destinationRoutes,
-  userRoutes,
-  productsRoutes,
-  scrappingRoutes,
-  paramsRoutes
+  paramsRoutes.getRouter(),
+  scrapperRoutes.getRouter(),
+  alertsRoutes.getRouter()
 );
 
 app.listen(5001, () => {

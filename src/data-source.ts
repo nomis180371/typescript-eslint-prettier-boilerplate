@@ -1,10 +1,10 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
-import { Destination } from './entity/destination';
-import { DestinationPicture } from './entity/destinationPicture';
 import { BaseEntity } from 'typeorm';
-import { User } from './entity/user';
-import { ScrappingParams } from './entity/params/ScrappingParams';
+import { ScrappingParamsEntity } from './scrappingParams/scrappingParamsEntity';
+import { ScrapperDataEntity } from './scrapper/scrapperDataEntity';
+import { ScrapperImageEntity } from './scrapper/scrapperImageEntity';
+import { AlertsEntity } from './alerts/alertsEntity';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -14,13 +14,13 @@ export const AppDataSource = new DataSource({
   password: 'Adelaplusbg159!',
   database: 'scrapping',
   synchronize: true,
-  logging: true,
+  logging: false,
   entities: [
     BaseEntity,
-    Destination,
-    DestinationPicture,
-    User,
-    ScrappingParams,
+    ScrappingParamsEntity,
+    ScrapperDataEntity,
+    ScrapperImageEntity,
+    AlertsEntity,
   ],
   subscribers: [],
   migrations: [],
@@ -28,6 +28,6 @@ export const AppDataSource = new DataSource({
 
 AppDataSource.initialize()
   .then(() => {
-    console.log('initiealized');
+    console.log('Datasource is initialized');
   })
   .catch((error) => console.log(error));

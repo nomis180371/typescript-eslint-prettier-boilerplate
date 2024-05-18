@@ -1,0 +1,1 @@
+{"version":3,"file":"scrappingTask.js","sourceRoot":"","sources":["../../../src/legacy/routes/scrappingTask.ts"],"names":[],"mappings":";;AAAA,MAAM,OAAO,GAAG,OAAO,CAAC,SAAS,CAAC,CAAC;AACnC,MAAM,MAAM,GAAG,OAAO,CAAC,MAAM,EAAE,CAAC;AAEhC,MAAM,EAAE,gBAAgB,EAAE,GAAG,OAAO,CAAC,8BAA8B,CAAC,CAAC;AAErE,MAAM,CAAC,IAAI,CAAC,oBAAoB,EAAE,gBAAgB,CAAC,CAAC;AAGpD,MAAM,CAAC,OAAO,GAAG,MAAM,CAAC"}
