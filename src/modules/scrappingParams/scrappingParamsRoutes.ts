@@ -2,15 +2,18 @@ import express from 'express';
 import { ScrappingParamsController } from './scrappingParamsController';
 
 export class ScrappingParamsRoutes {
-  private router: express.Router;
+  public router: express.Router;
   private scrappingParamsController: ScrappingParamsController;
 
   constructor() {
     this.router = express.Router();
     this.scrappingParamsController = new ScrappingParamsController();
+    this.initializeRoutes();
+  }
 
+  private initializeRoutes() {
     this.router.get(
-      '/getParamsById',
+      '/:id',
       this.scrappingParamsController.getScrappingParamByType.bind(
         this.scrappingParamsController
       )

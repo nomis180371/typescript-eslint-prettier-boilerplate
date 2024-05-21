@@ -1,5 +1,5 @@
 import puppeteer, { Browser, BrowserConnectOptions, Page } from 'puppeteer';
-import { ImageDtoType } from './scrapperTypes';
+import { ImageDtoType } from '../../types/scrapperTypes';
 import { ScrapperRepository } from './scrapperRepository';
 
 const baseUrl = 'https://www.vinted.fr/catalog?catalog[]=5';

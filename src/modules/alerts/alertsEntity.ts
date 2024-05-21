@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
-import { IAlertProductParams } from './alertsTypes';
+import { IAlertProductParams } from '../../types/alertsTypes';
 
 @Entity()
 export class AlertsEntity extends BaseEntity {
@@ -12,7 +12,7 @@ export class AlertsEntity extends BaseEntity {
   @Column({ nullable: false })
   channel: 'discord' | 'mail';
 
-  @Column({ nullable: false })
+  @Column('jsonb', { nullable: false })
   productParams: IAlertProductParams;
 
   @Column({ nullable: false })

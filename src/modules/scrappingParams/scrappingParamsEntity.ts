@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
-import { ParamTypeEnum, SourcesEnum } from './scrappingParamsType';
+import { ParamTypeEnum, SourcesEnum } from '../../types/scrappingParamsType';
 
 @Entity()
 export class ScrappingParamsEntity extends BaseEntity {

@@ -1,10 +1,11 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import { BaseEntity } from 'typeorm';
-import { ScrappingParamsEntity } from './scrappingParams/scrappingParamsEntity';
-import { ScrapperDataEntity } from './scrapper/scrapperDataEntity';
-import { ScrapperImageEntity } from './scrapper/scrapperImageEntity';
-import { AlertsEntity } from './alerts/alertsEntity';
+import { ScrappingParamsEntity } from './modules/scrappingParams/scrappingParamsEntity';
+import { ScrapperDataEntity } from './modules/scrapper/scrapperDataEntity';
+import { ScrapperImageEntity } from './modules/scrapper/scrapperImageEntity';
+import { AlertsEntity } from './modules/alerts/alertsEntity';
+import { User } from './modules/user/userEntity';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -21,6 +22,7 @@ export const AppDataSource = new DataSource({
     ScrapperDataEntity,
     ScrapperImageEntity,
     AlertsEntity,
+    User,
   ],
   subscribers: [],
   migrations: [],
