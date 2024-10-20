@@ -20,7 +20,7 @@ export class UserController {
 
   public async getUserById(req: Request, res: Response): Promise<void> {
     try {
-      const user = await this.authService.getUserById(req.params.id);
+      const user = await this.authService.getUserById(req.user.id);
       if (user) {
         res.status(200).json(user);
       } else {

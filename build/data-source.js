@@ -4,16 +4,14 @@ exports.AppDataSource = void 0;
 require("reflect-metadata");
 const typeorm_1 = require("typeorm");
 const typeorm_2 = require("typeorm");
-const scrappingParamsEntity_1 = require("./scrappingParams/scrappingParamsEntity");
-const scrapperDataEntity_1 = require("./scrapper/scrapperDataEntity");
-const scrapperImageEntity_1 = require("./scrapper/scrapperImageEntity");
+const scrappingParamsEntity_1 = require("./modules/scrappingParams/scrappingParamsEntity");
+const scrapperDataEntity_1 = require("./modules/scrapper/scrapperDataEntity");
+const scrapperImageEntity_1 = require("./modules/scrapper/scrapperImageEntity");
+const alertsEntity_1 = require("./modules/alerts/alertsEntity");
+const userEntity_1 = require("./modules/user/userEntity");
 exports.AppDataSource = new typeorm_1.DataSource({
-    type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'admin',
-    password: 'Adelaplusbg159!',
-    database: 'scrapping',
+    type: 'sqlite',
+    database: './rezell.sqlite',
     synchronize: true,
     logging: false,
     entities: [
@@ -21,6 +19,8 @@ exports.AppDataSource = new typeorm_1.DataSource({
         scrappingParamsEntity_1.ScrappingParamsEntity,
         scrapperDataEntity_1.ScrapperDataEntity,
         scrapperImageEntity_1.ScrapperImageEntity,
+        alertsEntity_1.AlertsEntity,
+        userEntity_1.User,
     ],
     subscribers: [],
     migrations: [],

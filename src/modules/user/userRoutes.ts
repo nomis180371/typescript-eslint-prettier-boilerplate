@@ -1,5 +1,6 @@
 import express from 'express';
 import { UserController } from './userController';
+import { authenticateToken } from '../../middleware/authMiddleware';
 
 export class UserRoutes {
   public router: express.Router;
@@ -17,15 +18,16 @@ export class UserRoutes {
       this.userController.createUser.bind(this.userController)
     );
     this.router.get(
-      '/:id',
+      '/',
+      authenticateToken,
       this.userController.getUserById.bind(this.userController)
     );
     this.router.put(
-      '/:id',
+      '/',
       this.userController.updateUser.bind(this.userController)
     );
     this.router.delete(
-      '/:id',
+      '/',
       this.userController.deleteUser.bind(this.userController)
     );
   }

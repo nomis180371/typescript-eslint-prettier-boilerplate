@@ -12,7 +12,7 @@ export class AlertsEntity extends BaseEntity {
   @Column({ nullable: false })
   channel: 'discord' | 'mail';
 
-  @Column('jsonb', { nullable: false })
+  @Column('simple-json', { nullable: false })
   productParams: IAlertProductParams;
 
   @Column({ nullable: false })

@@ -37,7 +37,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Initialize routes
 const paramsRoutes = new ScrappingParamsRoutes();
 const scrapperRoutes = new ScrapperRoutes();
 const alertsRoutes = new AlertsRoutes();

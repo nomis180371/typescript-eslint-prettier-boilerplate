@@ -12,10 +12,10 @@ export class ScrappingParamsEntity extends BaseEntity {
   @Column({ nullable: false })
   paramId: string;
 
-  @Column({ type: 'enum', enum: ParamTypeEnum, nullable: false })
+  @Column({ type: 'text', enum: ParamTypeEnum, nullable: false })
   type: ParamTypeEnum;
 
-  @Column({ type: 'enum', enum: SourcesEnum, nullable: false })
+  @Column({ type: 'text', enum: SourcesEnum, nullable: false })
   source: SourcesEnum;
 
   @Column({ nullable: true })

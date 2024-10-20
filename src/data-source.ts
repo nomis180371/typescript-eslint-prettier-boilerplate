@@ -8,13 +8,9 @@ import { AlertsEntity } from './modules/alerts/alertsEntity';
 import { User } from './modules/user/userEntity';
 
 export const AppDataSource = new DataSource({
-  type: 'postgres',
-  host: 'localhost',
-  port: 5432,
-  username: 'admin',
-  password: 'Adelaplusbg159!',
-  database: 'scrapping',
-  synchronize: true,
+  type: 'sqlite',
+  database: './rezell.sqlite',
+  synchronize: false,
   logging: false,
   entities: [
     BaseEntity,
